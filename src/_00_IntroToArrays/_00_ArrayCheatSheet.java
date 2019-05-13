@@ -16,17 +16,44 @@ public class _00_ArrayCheatSheet {
 		//5. use a for loop to set all the elements in the array to a string of your choice
 		for (int i = 0; i < strings.length; i++) {
 			strings[i] = "string " + i;
-			System.out.println(i);
+			System.out.println(strings[i]);
 		}
 		//6. use a for loop to print all the values in the array
 		//   BE SURE TO USE THE ARRAY'S length VARIABLE
 		
 		//7. make an array of 50 integers
-		
+		Integer[] ints = new Integer[50];
 		//8. use a for loop to make every value of the integer array a random number
-
+		int small = 0;
+		int big = 0;
+		Random r = new Random();
+		for (int i = 0; i < ints.length; i++) {
+			int rr = r.nextInt(100);
+			ints[i] = rr;
+			if(ints[i] == 0) {
+				small = ints[i];
+			}
+			else if(ints[i] < small) {
+				small = ints[i];
+			}
+			if(ints[i] == 100) {
+				big = ints[i];
+			}
+			else if(ints[i] > big) {
+				big = ints[i];
+			}
+			System.out.println(ints[i]);
+			
+		}
+		System.out.println(" ");
+		System.out.println(small);
+		System.out.println(big);
+		System.out.println(ints[49]);
+		
+		
+		
 		//9. without printing the entire array, print only the smallest number on the array
-
+		
 		//10 print the entire array to see if step 8 was correct
 
 		//11. print the largest number in the array.
